@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Delta & Script</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-blue: #38bdf8;
+            --accent-green: #22c55e;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --code-bg: #090d16;
+            --border: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .header {
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        .section {
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-blue);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .btn-download {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 14px 20px;
+            background-color: #0284c7;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+        }
+
+        .btn-download:hover {
+            background-color: #0369a1;
+            transform: translateY(-1px);
+        }
+
+        .code-box {
+            position: relative;
+            background-color: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px;
+            overflow-x: auto;
+        }
+
+        pre {
+            font-family: 'Consolas', 'Courier New', Courier, monospace;
+            font-size: 0.88rem;
+            color: #e2e8f0;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .btn-copy {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 10px;
+            background-color: #334155;
+            color: var(--text-main);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.88rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-copy:hover {
+            background-color: #475569;
+        }
+
+        .btn-copy.copied {
+            background-color: var(--accent-green);
+            color: #ffffff;
+        }
+
+        .icon {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-sub);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Link Unduhan & Script</h1>
+            <p>Akses unduhan APK dan salin script di bawah ini</p>
+        </div>
+
+        <!-- Section Download -->
+        <div class="section">
+            <div class="section-title">1. Unduh Aplikasi</div>
+            <a href="https://www.mediafire.com/file/dq20cidv8ykr3bu/Delta-2.735.1138.apk/file" target="_blank" rel="noopener noreferrer" class="btn-download">
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                </svg>
+                Download Delta APK (MediaFire)
+            </a>
+        </div>
+
+        <!-- Section Script -->
+        <div class="section">
+            <div class="section-title">2. Script Copy Paste</div>
+            <div class="code-box">
+                <pre id="scriptText">loadstring(game:HttpGet("https://isnahamzah.site/SubscribeYTisnahamzah/gantenghub"))()</pre>
+            </div>
+            <button class="btn-copy" id="copyBtn" onclick="copyScript()">
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                </svg>
+                <span id="btnText">Salin Kode</span>
+            </button>
+        </div>
+
+        <div class="footer">
+            Klik tombol unduh untuk membuka halaman Mediafire.
+        </div>
+    </div>
+
+    <script>
+        function copyScript() {
+            const codeText = document.getElementById('scriptText').innerText;
+            const copyBtn = document.getElementById('copyBtn');
+            const btnText = document.getElementById('btnText');
+
+            navigator.clipboard.writeText(codeText).then(() => {
+                btnText.innerText = 'Tersalin!';
+                copyBtn.classList.add('copied');
+
+                setTimeout(() => {
+                    btnText.innerText = 'Salin Kode';
+                    copyBtn.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Gagal menyalin: ', err);
+            });
+        }
+    </script>
+
+</body>
+</html>
